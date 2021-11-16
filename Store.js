@@ -2,16 +2,17 @@
 
     constructor(name) {
         this.name = name;
-        this.subscribers = [];
+        this.shoppers = [];
+        // Original -> Shopper Shopper Shopper Mall
+        // Gubber -> Shopper Mall
     }
 
     subscirbe(observer) {
-      this.subscribers.push(observer);
-      console.log(this.subscribers)
+      this.shoppers.push(observer);
     }
 
     sale(discount) {
-      this.subscribers.forEach(observer => observer.notify(this.name, discount));
+      this.shoppers.forEach(observer => observer.notify(this.name, discount));
     }
 
 }

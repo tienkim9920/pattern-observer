@@ -2,13 +2,16 @@ var Store = require('./Store');
 var Shopper = require('./Shopper');
 var Mall = require('./Mall');
 
-var original = new Store("Original Things");
-var gubber = new Store("Gubber Fubber");
+var original = new Store("Original");
+var gubber = new Store("Gubber");
 
+// Đăng ký cho Orginal
 var wdj = new Shopper("WDJ");
-var mike = new Shopper("Mike");
-var pete = new Shopper("Pete");
 var sam = new Shopper("Sam");
+var pete = new Shopper("Pete");
+
+// Đăng ký cho Gubber
+var mike = new Shopper("Mike");
 
 var originalMall = new Mall();
 
@@ -27,4 +30,4 @@ gubber.subscirbe(originalMall);
 gubber.sale(.1);
 original.sale(99);
 
-console.log(originalMall.sales);
+console.log(originalMall.stores);
